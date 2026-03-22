@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Link Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f3f4f6; }
+        .link-card:hover { transform: translateY(-2px); transition: all 0.2s; }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">My Links</h1>
+        
+        <div id="link-container" class="space-y-6"></div>
+    </div>
+
+    <script>
+        // 【ここを編集するだけ！】リンクのリスト
+        const linkData = [
+            {
+                category: "🛠 ツール",
+                links: [
+                    { name: "Google", url: "https://www.google.com" },
+                    { name: "DeepL 翻訳", url: "https://www.deepl.com" },
+                ]
+            },
+            {
+                category: "📺 エンタメ",
+                links: [
+                    { name: "YouTube", url: "https://www.youtube.com" },
+                    { name: "X (Twitter)", url: "https://x.com" },
+                ]
+            }
+        ];
+
+        // リンクを表示する処理
+        const container = document.getElementById('link-container');
+        linkData.forEach(section => {
+            let html = `<section>
+                <h2 class="text-xl font-semibold mb-3 text-gray-700 border-b-2 border-blue-400 pb-1">${section.category}</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">`;
+            
+            section.links.forEach(link => {
+                html += `
+                    <a href="${link.url}" target="_blank" class="link-card bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 block">
+                        <span class="text-blue-600 font-medium">${link.name}</span>
+                    </a>`;
+            });
+
+            html += `</div></section>`;
+            container.innerHTML += html;
+        });
+    </script>
+</body>
+</html>
