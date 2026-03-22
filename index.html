@@ -3,57 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Link Hub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Little Prince Dashboard</title>
     <style>
-        body { background-color: #f3f4f6; }
-        .link-card:hover { transform: translateY(-2px); transition: all 0.2s; }
+        :root {
+            --bg-color: #0b0d17; /* 深い夜空の色 */
+            --text-main: #e0e0e0;
+            --text-sub: #a0a0a0;
+            --accent-gold: #ffd700; /* 星の色 */
+            --accent-rose: #ffb7c5; /* バラの色 */
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            display: flex; justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center; width: 90%; max-width: 800px;
+            margin: auto; padding: 40px 0;
+        }
+
+        /* 天気：少し星の光をイメージ */
+        .weather-box {
+            font-size: 14px; margin-bottom: 20px; color: var(--accent-gold);
+            letter-spacing: 2px; height: 24px;
+            opacity: 0.8;
+        }
+
+        #date {
+            font-size: 16px; font-weight: 300; color: var(--text-sub);
+            margin-bottom: 5px; letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* 時計：細めでエレガントに */
+        #clock {
+            font-size: 90px; font-weight: 100; margin-bottom: 30px;
+            letter-spacing: 8px; line-height: 1; color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .search-box { margin-bottom: 50px; }
+        .search-box input {
+            width: 100%; padding: 12px 20px; border-radius: 2px; 
+            border: none; border-bottom: 1px solid #333;
+            font-size: 16px; background: transparent; color: white;
+            outline: none; box-sizing: border-box; transition: 0.5s;
+            text-align: center;
+        }
+        .search-box input:focus { 
+            border-bottom: 1px solid var(--accent-gold);
+            letter-spacing: 2px;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px; margin-bottom: 50px;
+        }
+        .link-item {
+            padding: 12px; background: rgba(255, 255, 255, 0.03); 
+            color: var(--text-sub);
+            text-decoration: none; border-radius: 4px; transition: 0.4s; font-size: 13px;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid transparent;
+        }
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.08); 
+            color: var(--accent-rose);
+            border: 1px solid rgba(255, 183, 197, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* 名言エリア：物語の余白を感じさせる */
+        .quote-area {
+            margin-top: 30px;
+            padding: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #quote {
+            font-size: 18px;
+            color: var(--text-main);
+            line-height: 2;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            white-space: pre-wrap;
+            font-style: italic;
+        }
+        .quote-area:hover #quote {
+            color: var(--accent-gold);
+        }
+        
+        /* 装飾用の小さな点（星） */
+        .star-deco {
+            color: var(--accent-gold);
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
-<body class="p-8">
+<body>
 
-    <div class="max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">My Links</h1>
-        
-        <div id="link-container" class="space-y-6"></div>
+<div class="container">
+    <div id="weather" class="weather-box">Loading...</div>
+    
+    <div id="date"></div>
+    <div id="clock">00:00</div>
+
+    <div class="star-deco">✦</div>
+
+    <div class="search-box">
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Google search..." autofocus autocomplete="off">
+        </form>
     </div>
 
-    <script>
-        // 【ここを編集するだけ！】リンクのリスト
-        const linkData = [
-            {
-                category: "🛠 ツール",
-                links: [
-                    { name: "Google", url: "https://www.google.com" },
-                    { name: "DeepL 翻訳", url: "https://www.deepl.com" },
-                ]
-            },
-            {
-                category: "📺 エンタメ",
-                links: [
-                    { name: "YouTube", url: "https://www.youtube.com" },
-                    { name: "X (Twitter)", url: "https://x.com" },
-                ]
-            }
-        ];
+    <div class="links">
+        <a href="https://gemini.google.com/" class="link-item" target="_blank">Gemini</a>
+        <a href="https://keep.google.com/" class="link-item" target="_blank">Keep</a>
+        <a href="https://drive.google.com/" class="link-item" target="_blank">Drive</a>
+        <a href="https://youtube.com/" class="link-item" target="_blank">YouTube</a>
+        <a href="https://github.com/" class="link-item" target="_blank">GitHub</a>
+        <a href="https://translate.google.com/" class="link-item" target="_blank">Translate</a>
+        <a href="https://kentaro222.github.io/Stage-Time-Toolkit/" class="link-item" target="_blank">Time Tools</a>
+        <a href="https://kentaro222.github.io/Stage-Tools/" class="link-item" target="_blank">Stage-Tools</a>
+        <a href="https://kentaro222.github.io/QR-Code-Generation-and-Saver/" class="link-item" target="_blank">QR-Code</a>
+        <a href="https://kentaro222.github.io/DOT-TAROT/" class="link-item" target="_blank">DOT TAROT</a>
+        <a href="https://kentaro222.github.io/Tokyo-Today-s-Weather/" class="link-item" target="_blank">Weather</a>
+<a href="https://kentaro222.github.io/Pixel-Run/" class="link-item" target="_blank">Pixel Run</a>
+    </div>
 
-        // リンクを表示する処理
-        const container = document.getElementById('link-container');
-        linkData.forEach(section => {
-            let html = `<section>
-                <h2 class="text-xl font-semibold mb-3 text-gray-700 border-b-2 border-blue-400 pb-1">${section.category}</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">`;
-            
-            section.links.forEach(link => {
-                html += `
-                    <a href="${link.url}" target="_blank" class="link-card bg-white p-4 rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-blue-300 block">
-                        <span class="text-blue-600 font-medium">${link.name}</span>
-                    </a>`;
-            });
+    <div class="quote-area" onclick="showRandomQuote()">
+        <div id="quote">...</div>
+    </div>
+</div>
 
-            html += `</div></section>`;
-            container.innerHTML += html;
-        });
-    </script>
+<script>
+    function updateTime() {
+        const now = new Date();
+        const options = { month: 'short', day: 'numeric', weekday: 'short' };
+        document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        document.getElementById('clock').textContent = 
+            `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    async function fetchWeather() {
+        try {
+            const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.6598&longitude=139.7024&current_weather=true');
+            const data = await res.json();
+            const temp = Math.round(data.current_weather.temperature);
+            document.getElementById('weather').textContent = `Tokyo ✧ ${temp}°C`;
+        } catch (e) {
+            document.getElementById('weather').textContent = "Clear Sky";
+        }
+    }
+    fetchWeather();
+
+    const quotes = [
+        "大切なものは、\n目に見えない。",
+        "心で見なくちゃ、ものごとはよく見えない。\n肝心なことは、目には見えないんだ。",
+        "砂漠が美しいのは、\nどこかに井戸を隠しているからだよ。",
+        "君のバラをかけがえのないものにしたのは、\n君がバラのために費やした時間だったんだ。",
+        "星がきれいなのは、\n目に見えない花が一つあるからだね。",
+        "きみは、ぼくにとって、\n世界にひとりだけの人になるんだ。",
+        "おとなは、自分たちだけでは、\nなにひとつわかってくれません。",
+        "自分自身を裁くほうが、\n他人を裁くよりもずっと難しい。",
+        "ねぇ、悲しいときには、\n夕日が見たくなるものだよね。",
+        "きみが手なずけたものには、\nいつまでも責任があるんだよ。"
+    ];
+
+    function showRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById('quote').textContent = quotes[randomIndex];
+    }
+    showRandomQuote();
+</script>
+
 </body>
 </html>
