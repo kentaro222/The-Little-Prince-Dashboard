@@ -68,55 +68,90 @@ button,input{font:inherit}button{color:inherit;cursor:pointer}
 
 <button id="secretExport" class="secret-export" type="button" title="Export index.html" aria-label="Export index.html">↓</button>
 
+<script id="dashboard-config" type="application/json">{"clock":{"locale":"en-US","showSeconds":false,"hour12":false},"weather":{"label":"Tokyo","latitude":35.6598,"longitude":139.7024},"search":{"engine":"https://www.google.com/search?q="},"builder":{"outputFilename":"index.html"},"timer":{"presets":[5,10,15,30],"allowCustom":true,"playSound":true,"wakeWithTimer":true},"theme":{"accent":"#9ecbff"},"backgrounds":["radial-gradient(circle at 20% 15%, #1e3550 0%, #101722 38%, #080b10 100%)","radial-gradient(circle at 78% 20%, #3a2548 0%, #17131f 35%, #090a0d 100%)","radial-gradient(circle at 50% 5%, #243d38 0%, #111d1b 35%, #080b0b 100%)","linear-gradient(135deg, #101827 0%, #11131b 45%, #07090d 100%)"],"linkGroups":[{"name":"Daily","links":[{"label":"ChatGPT","url":"https://chatgpt.com/","highlight":false,"highlightColor":"#ffff00","useAccentColor":true},{"label":"GitHub","url":"https://github.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Keep","url":"https://keep.google.com/","highlight":false,"highlightColor":"#ffff00","useAccentColor":false},{"label":"Drive","url":"https://drive.google.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"YouTube","url":"https://youtube.com/","highlight":true,"highlightColor":"#ff0000","useAccentColor":false},{"label":"Weather","url":"https://kentaro222.github.io/Today-Tomorrow-Weather/","highlight":true,"highlightColor":"#ffa600","useAccentColor":false},{"label":"翻訳","url":"https://translate.google.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Amazon","url":"https://www.amazon.co.jp/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Tools","links":[{"label":"Time Tools","url":"https://kentaro222.github.io/Stage-Time-Toolkit/","highlight":true,"highlightColor":"#00ff00","useAccentColor":false},{"label":"Stage Tools","url":"https://kentaro222.github.io/Stage-Tools/","highlight":true,"highlightColor":"#00ff00","useAccentColor":false},{"label":"MP3ラウドネス調整","url":"https://kentaro222.github.io/Audio-Loudness-Normalizer/","highlight":true,"highlightColor":"#ff9ee0","useAccentColor":false},{"label":"QR Code","url":"https://kentaro222.github.io/QR-Code-Generation-and-Saver/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Air fryer","url":"https://kentaro222.github.io/Air-fryer-conversion-tool","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"PIXEL TAROT","url":"https://kentaro222.github.io/PIXEL-TAROT/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"申送作成","url":"https://kentaro222.github.io/Handover-File-Creation-Tool/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Games","links":[{"label":"PIXLE JUMP","url":"https://kentaro222.github.io/Pixel-Jump/","highlight":true,"highlightColor":"#ffffff","useAccentColor":false},{"label":"Synth-Zooo","url":"https://kentaro222.github.io/Synth-Zooo/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"BIG CHEESE","url":"https://kentaro222.github.io/The-Big-Cheese-Single-Player/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Suzume-jong","url":"https://kentaro222.github.io/4nin-uchi-Suzume-jong/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Retro VideoPoker","url":"https://kentaro222.github.io/Retro-VideoPoker/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"REGICIDE","url":"https://kentaro222.github.io/Regicide-Single-Player/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Derby Mice","url":"https://kentaro222.github.io/Derby-for-Mice/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"CHILL WALK","url":"https://kentaro222.github.io/CHILL-WALK-Synthwave/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Music Visualizer","url":"https://kentaro222.github.io/Pixel-Mascot-Music-Visualizer/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Ghost-Stairs","url":"https://kentaro222.github.io/Ghost-Stairs/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Other","links":[{"label":"ダッシュボード","url":"https://kentaro222.github.io/My-Dashboard/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"DB更新","url":"https://github.com/kentaro222/My-Dashboard","highlight":true,"highlightColor":"#ff00ff","useAccentColor":false},{"label":"Home Page","url":"https://kentaro222.github.io/KENTARO-S-HOME-PAGE/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Tate Novel Studio","url":"https://kentaro222.github.io/test01/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"スクリプトチェック","url":"https://kentaro222.github.io/test02/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]}]}</script>
+
 <script>
-const CONFIG={"clock":{"locale":"en-US","showSeconds":false,"hour12":false},"weather":{"label":"Tokyo","latitude":35.6598,"longitude":139.7024},"search":{"engine":"https://www.google.com/search?q="},"builder":{"outputFilename":"index.html"},"timer":{"presets":[5,10,15,30],"allowCustom":true,"playSound":true,"wakeWithTimer":true},"theme":{"accent":"#9ecbff"},"backgrounds":["radial-gradient(circle at 20% 15%, #1e3550 0%, #101722 38%, #080b10 100%)","radial-gradient(circle at 78% 20%, #3a2548 0%, #17131f 35%, #090a0d 100%)","radial-gradient(circle at 50% 5%, #243d38 0%, #111d1b 35%, #080b0b 100%)","linear-gradient(135deg, #101827 0%, #11131b 45%, #07090d 100%)"],"linkGroups":[{"name":"Daily","links":[{"label":"ChatGPT","url":"https://chatgpt.com/","highlight":false,"highlightColor":"#ffff00","useAccentColor":true},{"label":"GitHub","url":"https://github.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Keep","url":"https://keep.google.com/","highlight":false,"highlightColor":"#ffff00","useAccentColor":false},{"label":"Drive","url":"https://drive.google.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"YouTube","url":"https://youtube.com/","highlight":true,"highlightColor":"#ff0000","useAccentColor":false},{"label":"Weather","url":"https://kentaro222.github.io/Today-Tomorrow-Weather/","highlight":true,"highlightColor":"#ffa600","useAccentColor":false},{"label":"翻訳","url":"https://translate.google.com/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Amazon","url":"https://www.amazon.co.jp/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Tools","links":[{"label":"Time Tools","url":"https://kentaro222.github.io/Stage-Time-Toolkit/","highlight":true,"highlightColor":"#00ff00","useAccentColor":false},{"label":"Stage Tools","url":"https://kentaro222.github.io/Stage-Tools/","highlight":true,"highlightColor":"#00ff00","useAccentColor":false},{"label":"MP3ラウドネス調整","url":"https://kentaro222.github.io/Audio-Loudness-Normalizer/","highlight":true,"highlightColor":"#ff9ee0","useAccentColor":false},{"label":"QR Code","url":"https://kentaro222.github.io/QR-Code-Generation-and-Saver/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Air fryer","url":"https://kentaro222.github.io/Air-fryer-conversion-tool","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"PIXEL TAROT","url":"https://kentaro222.github.io/PIXEL-TAROT/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"申送作成","url":"https://kentaro222.github.io/Handover-File-Creation-Tool/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Games","links":[{"label":"PIXLE JUMP","url":"https://kentaro222.github.io/Pixel-Jump/","highlight":true,"highlightColor":"#ffffff","useAccentColor":false},{"label":"Synth-Zooo","url":"https://kentaro222.github.io/Synth-Zooo/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"BIG CHEESE","url":"https://kentaro222.github.io/The-Big-Cheese-Single-Player/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Suzume-jong","url":"https://kentaro222.github.io/4nin-uchi-Suzume-jong/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Retro VideoPoker","url":"https://kentaro222.github.io/Retro-VideoPoker/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"REGICIDE","url":"https://kentaro222.github.io/Regicide-Single-Player/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Derby Mice","url":"https://kentaro222.github.io/Derby-for-Mice/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"CHILL WALK","url":"https://kentaro222.github.io/CHILL-WALK-Synthwave/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Music Visualizer","url":"https://kentaro222.github.io/Pixel-Mascot-Music-Visualizer/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Ghost-Stairs","url":"https://kentaro222.github.io/Ghost-Stairs/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]},{"name":"Other","links":[{"label":"ダッシュボード","url":"https://kentaro222.github.io/My-Dashboard/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"DB更新","url":"https://github.com/kentaro222/My-Dashboard","highlight":true,"highlightColor":"#ff00ff","useAccentColor":false},{"label":"Home Page","url":"https://kentaro222.github.io/KENTARO-S-HOME-PAGE/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"Tate Novel Studio","url":"https://kentaro222.github.io/test01/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false},{"label":"スクリプトチェック","url":"https://kentaro222.github.io/test02/","highlight":false,"highlightColor":"#9ecbff","useAccentColor":false}]}]};
+const CONFIG=JSON.parse(document.getElementById("dashboard-config").textContent);
+const weatherEl=document.getElementById("weather");
+const bgEl=document.getElementById("bg");
+const dateEl=document.getElementById("date");
+const clockEl=document.getElementById("clock");
+const searchFormEl=document.getElementById("searchForm");
+const searchEl=document.getElementById("search");
+const linksEl=document.getElementById("links");
+const countEl=document.getElementById("count");
+const tdisplayEl=document.getElementById("tdisplay");
+const presetsEl=document.getElementById("presets");
+const startEl=document.getElementById("start");
+const resetEl=document.getElementById("reset");
+const statusEl=document.getElementById("status");
+const wakeEl=document.getElementById("wake");
+const secretExportEl=document.getElementById("secretExport");
 
 function exportCurrentDashboard(){
   try{
-    const html="<!DOCTYPE html>
-"+document.documentElement.outerHTML;
-    const blob=new Blob([html],{type:"text/html"});
+    // Clone the page so transient runtime state is not written back
+    // into the live dashboard before exporting.
+    const clone=document.documentElement.cloneNode(true);
+
+    // Remove temporary runtime state that should not be baked into the file.
+    clone.querySelectorAll(".dragging,.drag-over-category,.drag-over-link").forEach(el=>{
+      el.classList.remove("dragging","drag-over-category","drag-over-link");
+    });
+
+    // Restore stable title/text where runtime may have changed it.
+    const titleEl=clone.querySelector("title");
+    if(titleEl) titleEl.textContent="Dashboard";
+
+    const html="<!DOCTYPE html>"+clone.outerHTML;
+    const blob=new Blob([html],{type:"text/html;charset=utf-8"});
     const url=URL.createObjectURL(blob);
+
     const a=document.createElement("a");
     a.href=url;
     a.download="index.html";
+    a.style.display="none";
     document.body.appendChild(a);
     a.click();
-    a.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),1000);
+
+    setTimeout(()=>{
+      a.remove();
+      URL.revokeObjectURL(url);
+    },1000);
   }catch(e){
+    console.error(e);
     alert("index.html を出力できませんでした。");
   }
 }
 
-document.getElementById("secretExport").addEventListener("click",exportCurrentDashboard);
+secretExportEl.addEventListener("click",exportCurrentDashboard);
 
 let bgIndex=-1;
 function bg(){let n=bgIndex;while(CONFIG.backgrounds.length>1&&n===bgIndex)n=Math.floor(Math.random()*CONFIG.backgrounds.length);if(n<0)n=0;bgIndex=n;document.body.style.backgroundImage=CONFIG.backgrounds[n]}
-bg();document.getElementById("bg").onclick=bg;
-function clock(){const n=new Date();date.textContent=n.toLocaleDateString(CONFIG.clock.locale,{weekday:"long",month:"long",day:"numeric"}).toUpperCase();document.getElementById("clock").textContent=n.toLocaleTimeString(CONFIG.clock.locale,{hour:"2-digit",minute:"2-digit",second:CONFIG.clock.showSeconds?"2-digit":undefined,hour12:CONFIG.clock.hour12})}clock();setInterval(clock,1000);
+bg();bgEl.onclick=bg;
+function clock(){const n=new Date();dateEl.textContent=n.toLocaleDateString(CONFIG.clock.locale,{weekday:"long",month:"long",day:"numeric"}).toUpperCase();clockEl.textContent=n.toLocaleTimeString(CONFIG.clock.locale,{hour:"2-digit",minute:"2-digit",second:CONFIG.clock.showSeconds?"2-digit":undefined,hour12:CONFIG.clock.hour12})}clock();setInterval(clock,1000);
 function wicon(code){if(code===0)return"☀";if(code<=3)return"⛅";if(code<=48)return"🌫";if(code<=67)return"🌧";if(code<=77)return"❄";if(code<=82)return"🌦";return"⛈"}
-fetch("https://api.open-meteo.com/v1/forecast?latitude="+CONFIG.weather.latitude+"&longitude="+CONFIG.weather.longitude+"&current=temperature_2m,weather_code&timezone=auto").then(r=>r.json()).then(d=>weather.textContent=wicon(d.current.weather_code)+"  "+CONFIG.weather.label+"  "+Math.round(d.current.temperature_2m)+"°C").catch(()=>weather.textContent=CONFIG.weather.label+" · Weather unavailable");
-searchForm.onsubmit=e=>{e.preventDefault();const q=search.value.trim();if(q)window.open(CONFIG.search.engine+encodeURIComponent(q),"_blank")};
-let total=0;links.innerHTML=CONFIG.linkGroups.map(g=>{total+=g.links.length;return'<section class="cat"><div class="catlabel">'+g.name+'</div><div class="grid">'+g.links.map(x=>{const cls=x.highlight?"link highlighted":"link";const hl=x.useAccentColor?CONFIG.theme.accent:x.highlightColor;const style=x.highlight?' style="--hl:'+hl+'"':"";return'<a class="'+cls+'"'+style+' target="_blank" rel="noopener" href="'+x.url+'"><span class="dot"></span>'+x.label+'</a>'}).join("")+'</div></section>'}).join("");count.textContent=total+" links";
-const presetRoot=document.getElementById("presets");
+fetch("https://api.open-meteo.com/v1/forecast?latitude="+CONFIG.weather.latitude+"&longitude="+CONFIG.weather.longitude+"&current=temperature_2m,weather_code&timezone=auto").then(r=>r.json()).then(d=>weatherEl.textContent=wicon(d.current.weather_code)+"  "+CONFIG.weather.label+"  "+Math.round(d.current.temperature_2m)+"°C").catch(()=>weatherEl.textContent=CONFIG.weather.label+" · Weather unavailable");
+searchFormEl.onsubmit=e=>{e.preventDefault();const q=searchEl.value.trim();if(q)window.open(CONFIG.search.engine+encodeURIComponent(q),"_blank")};
+let total=0;linksEl.innerHTML=CONFIG.linkGroups.map(g=>{total+=g.links.length;return'<section class="cat"><div class="catlabel">'+g.name+'</div><div class="grid">'+g.links.map(x=>{const cls=x.highlight?"link highlighted":"link";const hl=x.useAccentColor?CONFIG.theme.accent:x.highlightColor;const style=x.highlight?' style="--hl:'+hl+'"':"";return'<a class="'+cls+'"'+style+' target="_blank" rel="noopener" href="'+x.url+'"><span class="dot"></span>'+x.label+'</a>'}).join("")+'</div></section>'}).join("");countEl.textContent=total+" links";
+const presetRoot=presetsEl;
 presetRoot.innerHTML=CONFIG.timer.presets.map(m=>'<button class="btn preset" data-m="'+m+'">'+m+' min</button>').join("")+(CONFIG.timer.allowCustom?'<button id="custom" class="btn">Custom</button>':"");
 let def=(CONFIG.timer.presets[0]||5)*60,remain=def,running=false,int=null,target=null;
 function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
-function draw(){tdisplay.textContent=fmt(remain);start.textContent=running?"Pause":"Start";document.title=running?fmt(remain)+" · Dashboard":"Dashboard"}
+function draw(){tdisplayEl.textContent=fmt(remain);startEl.textContent=running?"Pause":"Start";document.title=running?fmt(remain)+" · Dashboard":"Dashboard"}
 function stopi(){if(int)clearInterval(int);int=null;target=null}
-function setm(m){stopi();def=Math.round(m*60);remain=def;running=false;status.textContent="";draw()}
-function tick(){if(!running||!target)return;remain=Math.max(0,Math.ceil((target-Date.now())/1000));if(remain<=0){running=false;stopi();status.textContent="Time's up.";draw();if(CONFIG.timer.playSound)sound();if(CONFIG.timer.wakeWithTimer)releaseWake();return}draw()}
-function begin(){if(remain<=0)remain=def;running=true;target=Date.now()+remain*1000;int=setInterval(tick,250);status.textContent="";draw();if(CONFIG.timer.wakeWithTimer)requestWake()}
+function setm(m){stopi();def=Math.round(m*60);remain=def;running=false;statusEl.textContent="";draw()}
+function tick(){if(!running||!target)return;remain=Math.max(0,Math.ceil((target-Date.now())/1000));if(remain<=0){running=false;stopi();statusEl.textContent="Time's up.";draw();if(CONFIG.timer.playSound)sound();if(CONFIG.timer.wakeWithTimer)releaseWake();return}draw()}
+function begin(){if(remain<=0)remain=def;running=true;target=Date.now()+remain*1000;int=setInterval(tick,250);statusEl.textContent="";draw();if(CONFIG.timer.wakeWithTimer)requestWake()}
 function pause(){tick();running=false;stopi();draw()}
-start.onclick=()=>running?pause():begin();reset.onclick=()=>{stopi();running=false;remain=def;status.textContent="";draw();if(CONFIG.timer.wakeWithTimer)releaseWake()};
+startEl.onclick=()=>running?pause():begin();resetEl.onclick=()=>{stopi();running=false;remain=def;statusEl.textContent="";draw();if(CONFIG.timer.wakeWithTimer)releaseWake()};
 document.querySelectorAll(".preset").forEach(b=>b.onclick=()=>setm(Number(b.dataset.m)));
-if(document.getElementById("custom"))custom.onclick=()=>{const v=prompt("Minutes","15");if(v===null)return;const m=Number(v);if(m>0&&m<=1440)setm(m)};
+if(document.getElementById("custom"))document.getElementById("custom").onclick=()=>{const v=prompt("Minutes","15");if(v===null)return;const m=Number(v);if(m>0&&m<=1440)setm(m)};
 function sound(){try{const A=window.AudioContext||window.webkitAudioContext;if(!A)return;const c=new A(),o=c.createOscillator(),g=c.createGain();o.frequency.value=660;g.gain.setValueAtTime(.0001,c.currentTime);g.gain.exponentialRampToValueAtTime(.15,c.currentTime+.02);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+.7);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.75)}catch(e){}}
-let lock=null,requested=false;function wakeDraw(){wake.classList.toggle("active",!!lock);wake.textContent=lock?"ON":"OFF"}
+let lock=null,requested=false;function wakeDraw(){wakeEl.classList.toggle("active",!!lock);wakeEl.textContent=lock?"ON":"OFF"}
 async function requestWake(){if(!("wakeLock" in navigator))return;try{lock=await navigator.wakeLock.request("screen");requested=true;wakeDraw();lock.addEventListener("release",()=>{lock=null;wakeDraw()})}catch(e){}}
 async function releaseWake(){requested=false;if(lock){try{await lock.release()}catch(e){}}lock=null;wakeDraw()}
-wake.onclick=()=>lock||requested?releaseWake():requestWake();document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&requested&&!lock)requestWake()});wakeDraw();draw();
+wakeEl.onclick=()=>lock||requested?releaseWake():requestWake();document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&requested&&!lock)requestWake()});wakeDraw();draw();
 </script>
 </body>
 </html>
